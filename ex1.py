@@ -32,9 +32,9 @@ def copy_and_sort_files(src_dir, dst_dir):
         print(f"Error: {e}")
 
 def main():
-    # Встановлюємо аргументи для прикладу
-    src_dir = "/path/to/source"  # Змініть це на фактичний шлях до вашої вихідної директорії
-    dst_dir = "/path/to/destination"  # Змініть це на фактичний шлях до вашої директорії призначення або залиште для використання 'dist'
+    args = parse_args()
+    src_dir = args.src_dir
+    dst_dir = args.dst_dir
     
     if not os.path.isdir(src_dir):
         print(f"Error: {src_dir} is not a valid directory.")
